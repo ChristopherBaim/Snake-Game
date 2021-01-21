@@ -5,10 +5,8 @@ master = Tk()
 xSize = 500
 ySize = 500
 canvas = Canvas(master, width=xSize, height=ySize)
-#rect = canvas.create_rectangle(  50, 50 , 60, 60, fill='black')
+
 canvas.create_rectangle(  10, 10 , 18, 18, fill='green')
-##canvas.create_rectangle(  60, 50 , 68, 58, fill='green')
-##canvas.create_rectangle(  70, 50 , 78, 58, fill='green')
 test = canvas.find_closest(20,20)
 direction = (10,0)
 snake = [(10,10)]
@@ -95,10 +93,9 @@ def clock():
             freeSpots.remove(newHead)
     else:
         print("Game Over")
-        
-    
+        lose = Label(master, text="Game Over", font=("Courier", 44, "bold"))
+        lose.place(x=100, y=10)
 
-    
         
 clock()
 
